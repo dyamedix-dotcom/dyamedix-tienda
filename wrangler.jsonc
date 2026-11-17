@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "dyamedix-db",
-      "database_id": "REEMPLAZAR_CON_ID_DE_D1",
+      "database_id": "d8dbbc97-59ab-4ca6-b0e2-94079da72721",
       "migrations_dir": "migrations"
     }
   ],
