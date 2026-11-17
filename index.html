@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eaf7ff"><title>DYAMEDIX | Insumos médicos</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">DYAMEDIX <small>INSUMOS MÉDICOS</small></a>
+  <button class="cartBtn" id="openCart">🛒 Carrito <b id="cartCount">0</b></button>
+</header>
+<section class="hero">
+  <div class="logoSpace">Espacio reservado para tu logo</div>
+  <p class="eyebrow">CALIDAD • ATENCIÓN • CONFIANZA</p>
+  <h1>Insumos médicos para tu cuidado y trabajo</h1>
+  <p>Explora nuestro catálogo y solicita una cotización por WhatsApp.</p>
+  <a class="primary" href="#catalogo">Ver catálogo</a>
+</section>
+<main>
+  <div class="sectionHead"><div><p class="eyebrow">CATÁLOGO</p><h2 id="catalogo">Nuestros productos</h2></div>
+  <input id="search" placeholder="Buscar producto..." aria-label="Buscar producto"></div>
+  <div id="categories" class="chips"></div>
+  <div id="products" class="products"><p>Cargando catálogo...</p></div>
+</main>
+<footer><b>DYAMEDIX</b><p>Solicita tu cotización sin compromiso.</p><small>Atención por WhatsApp</small></footer>
+
+<div class="modal hidden" id="cartModal">
+ <div class="dialog">
+  <button class="close" id="closeCart">×</button><p class="eyebrow">TU PEDIDO</p><h2>Carrito de cotización</h2>
+  <div id="cartItems"></div>
+  <label>Tu nombre <input id="customerName" placeholder="Nombre y apellido"></label>
+  <label>Nota (opcional) <textarea id="customerNote" placeholder="Indica alguna consulta adicional"></textarea></label>
+  <label>Enviar cotización a
+   <select id="whatsappChoice"><option value="51992713564">WhatsApp 1</option><option value="51986996848">WhatsApp 2</option></select>
+  </label>
+  <button class="primary full" id="sendQuote">Enviar cotización por WhatsApp</button>
+ </div>
+</div>
+<script src="/app.js"></script>
+</body></html>

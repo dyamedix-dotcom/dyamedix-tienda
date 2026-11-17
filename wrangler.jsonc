@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dyamedix-tienda",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-17",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/media/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dyamedix-db",
+      "database_id": "REEMPLAZAR_CON_ID_DE_D1",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "IMAGES",
+      "bucket_name": "dyamedix-images"
+    }
+  ]
+}

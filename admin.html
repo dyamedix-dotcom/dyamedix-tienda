@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Panel DYAMEDIX</title><link rel="stylesheet" href="/style.css"></head>
+<body class="adminBody">
+<header class="top"><a class="brand" href="/">DYAMEDIX <small>ADMINISTRACIÓN</small></a><a href="/">Ver tienda ↗</a></header>
+<main class="adminMain">
+ <section class="panel" id="loginPanel"><p class="eyebrow">ACCESO PRIVADO</p><h1>Administrar DYAMEDIX</h1><p>Ingresa la contraseña privada para gestionar el catálogo.</p><label>Contraseña<input id="password" type="password" autocomplete="current-password"></label><button class="primary full" id="login">Entrar</button><p id="loginMsg" class="message"></p></section>
+ <section class="panel hidden" id="adminPanel"><div class="sectionHead"><div><p class="eyebrow">CATÁLOGO</p><h1>Productos</h1></div><button class="primary" id="newProduct">+ Nuevo</button></div>
+ <form id="productForm" class="hidden">
+  <input type="hidden" id="productId">
+  <label>Nombre del producto<input id="name" required></label>
+  <label>Categoría<input id="category" placeholder="Ej. Catéteres"></label>
+  <label>Descripción<textarea id="description"></textarea></label>
+  <label>Nota interna de precio (no se muestra al público)<input id="priceNote" placeholder="Ej. actualizar precio"></label>
+  <label>Variantes (una por línea; ej. 18, 20, 22, 24)<textarea id="variants" placeholder="18&#10;20&#10;22&#10;24"></textarea></label>
+  <label>Fotografía<input id="photo" type="file" accept="image/*"></label>
+  <label class="check"><input id="active" type="checkbox" checked> Producto visible en la tienda</label>
+  <div class="actions"><button class="primary" type="submit">Guardar producto</button><button class="secondary" type="button" id="cancelEdit">Cancelar</button></div><p id="formMsg" class="message"></p>
+ </form><div id="adminProducts"></div>
+ </section>
+</main><script src="/admin.js"></script></body></html>
